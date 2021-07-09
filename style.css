@@ -1,0 +1,93 @@
+/* start text style */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.words{
+    font-size: 80px;
+}
+.words a.jana{
+    color: cornflowerblue;
+}
+
+/* start hover color change */
+.words a:hover{
+    color: cornflowerblue;
+}
+.words .jana:hover{
+    color: black;
+}
+/* end hover color change */
+
+/* end text style */
+
+/* ========================================================= */
+
+/* start photo style */
+/* end photo style */
+
+/* ========================================================= */
+
+/* start layout */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 2%;
+}
+
+/* start grid layout */
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.words{
+    grid-column: 1/6;
+    grid-row: 2;
+}
+.menu{
+    grid-column: 5/8;
+    grid-row: 1;
+}
+/* end grid layout */
+
+/* end layout */
+
+/* ========================================================= */
+
+/* start menu layout and style */
+.menu ul{
+    list-style: none; 
+    margin-top: 2%;
+}
+.menu ul li{
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: right;
+    /* position: relative; */
+    /* color for brackets */
+    color: cornflowerblue;
+}
+.menu ul li a{
+    color:black;
+}
+.menu ul li a:hover{
+    color:cornflowerblue;
+}
+.menu ul ul{
+    display: none;
+}
+.menu ul li:hover > ul{
+    display: block;
+}
+/* end menu layout and style */
