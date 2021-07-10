@@ -15,6 +15,16 @@ ul{
 .words a.jana{
     color: cornflowerblue;
 }
+.tit{
+    font-size: 80px;
+    color: cornflowerblue;
+}
+.list{
+    font-size: 50px;
+}
+#list#email{
+    color:white;
+}
 
 /* start hover color change */
 .words a:hover{
@@ -22,6 +32,13 @@ ul{
 }
 .words .jana:hover{
     color: black;
+}
+.list a:hover{
+    color: cornflowerblue;
+    
+}
+#list:hover #email {
+    color: red;
 }
 /* end hover color change */
 
@@ -41,7 +58,6 @@ html{
 body{
     padding: 2%;
 }
-
 /* start grid layout */
 .wrapper{
     display: grid;
@@ -49,10 +65,39 @@ body{
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
+/* main */
 .words{
     grid-column: 1/6;
     grid-row: 2;
 }
+/* main */
+
+/* about */
+.tit{
+    grid-column: 1/6;
+    grid-row: 1;
+}
+.list{
+    grid-column: 2/6;
+    grid-row: 2/4;
+}
+.pic{
+    grid-column: 5/8;
+    grid-row: 2/4;
+}
+.back{
+    grid-column: 1;
+    grid-row: 5;
+}
+.titsub{
+    grid-column: 1/6;
+    grid-row: 6;
+}
+.info{
+    grid-column: 2/6;
+    grid-row: 5/6;
+}
+/* about */
 .menu{
     grid-column: 5/8;
     grid-row: 1;
@@ -91,3 +136,86 @@ body{
     display: block;
 }
 /* end menu layout and style */
+
+
+
+/* start back button */
+.circle{
+    position: absolute;
+    bottom: 60%;
+    width: 95%;
+    font-size: 50px;
+    text-align: center;
+    color: cornflowerblue;
+}
+.back{
+    opacity: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid cornflowerblue;
+    line-height: 0;
+    position: fixed;
+    bottom: 40px;
+
+}
+/* end back button */
+
+
+/* start experiment */
+
+/* section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.scroll-down {
+    opacity: 50%;
+    height: 50px;
+    width: 30px;
+    border: 2px solid cornflowerblue;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+.scroll-down::after{
+    opacity: 50%;
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%);
+    border: 2px solid cornflowerblue;
+    border-radius: 50%;
+    animation: scroll-down 1.6s ease-in-out infinite;
+}
+.scroll-down::before {
+    top: 35%;
+    animation-delay: 0.5s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+}
+  
+@keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+}
+/* end experiment */
