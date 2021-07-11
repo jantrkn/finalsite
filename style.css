@@ -153,6 +153,7 @@ body{
     font-size: 50px;
     text-align: center;
     color: cornflowerblue;
+    animation: bounce 5s infinite linear;
 }
 .back{
     opacity: 50%;
@@ -164,7 +165,7 @@ body{
     line-height: 0;
     position: fixed;
     bottom: 40px;
-
+    
 }
 /* end back button */
 
@@ -220,13 +221,14 @@ body{
 
 /* start shapes */
 .circle1{
-    border: 3px solid cornflowerblue;
+    border: 3px dashed cornflowerblue;
     height: 150px;
     width: 150px;
     border-radius: 50%;
     left: 40%;
     position: relative;
     z-index: 999;
+    animation: rotation 10s infinite linear;
 }
 .circle2{
     border: 3px solid pink;
@@ -241,3 +243,28 @@ body{
     z-index: 9;
 }
 /* end shapes */
+
+/* start rotate */
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+@keyframes bounce {
+    25% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(6px);
+    }
+    75% {
+        transform: translateX(-6px);
+      }
+    100%{
+        transform: translate(0);
+    }
+}
+/* ened rotate */
